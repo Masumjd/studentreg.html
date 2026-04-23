@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; 
+            font-size: 14px;
+        }
+
+
+        .inline-group {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .inline-group label {
+            display: inline;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h1>Student Registration</h1>
+
+    <label>Student Name:</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Father's Name:</label>
+    <input type="text" placeholder="Enter Father's Name">
+
+    <label>Mother's Name:</label>
+    <input type="text" placeholder="Enter Mother's name">
+
+    <label>Email ID:</label>
+    <input type="email" placeholder="example@mail.com">
+
+    <label>Mobile Number:</label>
+    <input type="number" placeholder="01*********">
+
+    <label>Gender:</label>
+    <div class="inline-group">
+        <input type="radio" name="studentGender" value="Male" id="genderMale">
+        <label for="genderMale">Male</label>
+
+        <input type="radio" name="studentGender" value="Female" id="genderFemale">
+        <label for="genderFemale">Female</label>
+    </div>
+
+    <label>Educational History:</label>
+    <div class="inline-group">
+        <input type="checkbox" name="Studentcertificate" value="SSC" id="CertSSC">
+        <label for="CertSSC">SSC</label>
+        
+        <input type="checkbox" name="Studentcertificate" value="HSC" id="CertHSC">
+        <label for="CertHSC">HSC</label>
+        
+        <input type="checkbox" name="Studentcertificate" value="BBA" id="CertBBA">
+        <label for="CertBBA">BBA</label>
+    </div>
+
+    <label>Subject:</label>
+    <select>
+        <option value="">Select an Option</option>
+        <option value="English">English</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+    </select>
+
+    <label>Experience:</label>
+    <textarea placeholder="Text here..." rows="3"></textarea>
+
+    <button type="submit">Submit Registration</button>
+</form>
+
+</body>
+</html>
